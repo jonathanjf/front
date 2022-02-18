@@ -149,6 +149,7 @@ input[type="text"]::placeholder {
     height: 100vh;
     transform: translateX(-100%);
     transition: 0.5s;
+    z-index: 1;
   }
 
   .logo-container {
@@ -188,19 +189,18 @@ input[type="text"]::placeholder {
 
   .search-bar-container > input button {
     height: 100%;
+    
   }
 
   .search-bar-container > input {
     width: 80%;
+    border-radius: 0;
   }
 
   .search-bar-container > button {
     width: 20%;
     padding: 0;
     font-weight: bolder;
-  }
-
-  .singular-icon-container {
-
+    border-radius: 0;
   }
 }
