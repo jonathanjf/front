@@ -1,0 +1,48 @@
+.newsletter-container {
+  background-color: #F5717F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.newsletter-container > h2 {
+  color: white;
+  text-transform: uppercase;
+  padding-top: 15px;
+}
+
+.newsletter-container > p {
+  color: white;
+  padding-top: 5px;
+}
+
+.newsletter-input-container {
+  padding: 15px;
+  display: flex;
+  width: 60vw;
+}
+
+input[type="text"] {
+  border-style: none;
+  width: 80%;
+  height: 40px;
+  border-radius: 6px 0px 0px 6px;
+}
+
+.news-button {
+  background-color: white;
+  border-style: none;
+  border-radius:0px 6px 6px 0px;
+  color: #345C7D;
+  font-size: 10px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  height: 40px;
+  padding-right: 5px;
+}
+
+input[type="text"]::placeholder {
+  padding-left: 10px;
+  font-style: italic;
+  color: #AAAAAA;
+}

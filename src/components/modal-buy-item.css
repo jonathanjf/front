@@ -1,0 +1,22 @@
+.product-buy-container {
+  position: fixed;
+  background-color: #F5717F;
+  width: 40vw;
+  height: 10vh;
+  margin-left: 25%;
+  margin-bottom: 40%;
+}
+
+.close-button {
+  width: 8%;
+  height: 20%;
+  padding-left: 5px;
+  padding-top: 5px;
+}
+
+.popup-message {
+  text-align: center;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+}
