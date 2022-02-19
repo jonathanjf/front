@@ -2,11 +2,31 @@ import { render } from '@testing-library/react';
 import react, { useState } from 'react';
 import "./newsletter.css";
 
+
+const axios = require('axios').default;
+
+
 function Newsletter() {
   const [email, setEmail] = useState('');
 
   const handleEmail = (event) => {
     setEmail(event.target.value)
+  }
+
+  const sendPostRequest = () => {
+    const emailJson = JSON.stringify({email: email})
+    axios.post('https://foreverliss1.websiteseguro.com/teste-dev/newsletter.php', {
+      data: emailJson,
+    }, { headers: {
+      'Content-Type': 'application/json'
+      }
+    })
+    .then((response) => {
+      window.alert(response)
+    })
+    .catch((error) => {
+      window.alert(error)
+    })
   }
 
   return (
@@ -19,7 +39,7 @@ function Newsletter() {
           placeholder="Digite aqui o seu melhor email" 
           onChange={handleEmail}
         />
-        <button type="button" className="news-button">cadastrar</button>
+        <button type="button" onClick={() => sendPostRequest() }  className="news-button">cadastrar</button>
       </div>
     </div>
   )
