@@ -1,17 +1,22 @@
 import userPng from '../photos-and-icons/user.png';
-import cartIcon from '../photos-and-icons/shopping-cart.png';
+import cartIcon from '../photos-and-icons/cart-svg.svg';
+import { Link } from 'react-router-dom'
 
 function IconsHeader() {
   return (
     <div className="icons-container">
-      <div className="singular-icon-container">
-        <img src={userPng} className="icon-style"/>
-        <p>minha conta</p>
-      </div>
-      <div className="singular-icon-container">
-        <img src={cartIcon} className="icon-style"/>
-        <p>carrinho</p>
-      </div>
+      <Link to="/" >
+        <div className="singular-icon-container">
+          <img src={userPng} className="icon-style"/>
+          <p>minha conta</p>
+        </div>
+      </Link>
+       <Link to="/" >
+        <div className="singular-icon-container">
+          <img src={cartIcon} className="icon-style" />
+          <p>carrinho</p>
+        </div>
+      </Link>
     </div>
   )
 }
